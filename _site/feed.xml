@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Richard Thombs</title>
+    <description>Lessons in trying to keep the snowball agile.
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 18 Aug 2014 21:56:58 +0100</pubDate>
+    <lastBuildDate>Mon, 18 Aug 2014 21:56:58 +0100</lastBuildDate>
+    <generator>Jekyll v2.3.0</generator>
+    
+      <item>
+        <title>Database design lessons</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;We have a successful web application, designed and architected back in the early days of C# and ASP.NET.
+Although the software architecture has been easy to evolve, the supporting database infrastructure has proven
+very resilient to change.&lt;/p&gt;
+
+&lt;p&gt;This post discusses the design lessons that we have learnt in 10 years of maintaining and upgrading our
+database architecture.&lt;/p&gt;
+
+&lt;h1 id=&quot;identify-the-tenant-in-every-table&quot;&gt;1. Identify the tenant in every table&lt;/h1&gt;
+
+&lt;p&gt;While it is ultimately possible to identify the owner of each row in each table, most of the time this is only possible by
+joining to one or more related tables. This makes it extremely expensive to delete data owned by ex-clients.&lt;/p&gt;
+
+&lt;p&gt;In our example, each client has a unique &lt;code&gt;AccountID&lt;/code&gt;, and so every table in the database should contain an &lt;code&gt;AccountID&lt;/code&gt; column.
+It does not have to be part of the table’s primary key, nor even defined as a foreign key, but create an index on it so that
+it’s easy to identify rows to delete.&lt;/p&gt;
+
+&lt;p&gt;This has the added advantage of making the database easy to &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ms190787.aspx&quot;&gt;partition&lt;/a&gt;,
+should the evolution of the database architecture require it.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 18 Aug 2014 20:15:22 +0100</pubDate>
+        <link>http://yourdomain.com/aspnet/sqlserver/2014/08/18/lessons-from-the-past.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/aspnet/sqlserver/2014/08/18/lessons-from-the-past.html</guid>
+        
+        
+        <category>aspnet</category>
+        
+        <category>sqlserver</category>
+        
+      </item>
+    
+      <item>
+        <title>Upgrading ASP.NET database infrastructure</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;We have a successful web application, designed and architected back in the early days of C# and ASP.NET.
+Although the software architecture has been easy to evolve, the supporting database infrastructure has proven
+very resilient to change.&lt;/p&gt;
+
+&lt;p&gt;The database design is a single, monolithic, multi-tenant database, hosted on a powerful database server with
+the database stored on a large RAID 10 volume.&lt;/p&gt;
+
+&lt;p&gt;While the design has been extremely successful and cost-effective, it is not without it’s problems.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;The database server itself represents a huge single point of failure. Although backups of database and transaction
+logs would ensure no data was lost, the amount of downtime required to restore the backups onto a new server would
+be embarrasing and the loss of client confidence would be damaging to the business.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The database is in use 24/7/365, making it hard to perform any maintainance that requires downtime.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The database is too large to quickly replicate, making experiementation on database copies impossible.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The database backups are too large to efficiently download.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Re-indexing and other database maintenance operations take too long and lock essential tables.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pruning out old client’s data is slow, requiring many joins and lengthy operations that lock essential tables.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;options&quot;&gt;Options&lt;/h1&gt;
+
+&lt;h2 id=&quot;database-servers&quot;&gt;Database servers&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Single SQL Server&lt;/li&gt;
+  &lt;li&gt;Fault tolerant SQL Server pair&lt;/li&gt;
+  &lt;li&gt;SQL Azure&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;cloud-v-hosted&quot;&gt;Cloud v Hosted&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Disc performance&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;tennancy&quot;&gt;Tennancy&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Single tenant per database&lt;/li&gt;
+  &lt;li&gt;Multiple tenants per database&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Mon, 18 Aug 2014 20:15:22 +0100</pubDate>
+        <link>http://yourdomain.com/aspnet/sqlserver/azure/2014/08/18/infrastructure-upgrade-1.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/aspnet/sqlserver/azure/2014/08/18/infrastructure-upgrade-1.html</guid>
+        
+        
+        <category>aspnet</category>
+        
+        <category>sqlserver</category>
+        
+        <category>azure</category>
+        
+      </item>
+    
+      <item>
+        <title>Migrating a large scale traditional ASP.NET &amp; SQL Server web application to Azure</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;More than 10 years ago, we created a SaaS web application using the exciting new technologies of C# and ASP.NET
+backed by the less exciting but well understood SQL Server.&lt;/p&gt;
+
+&lt;p&gt;The application has been very successful and while we’ve kept the core infrastructure team small, we’ve enjoyed
+considerable user growth.&lt;/p&gt;
+
+&lt;p&gt;With the growth came an ever increasting infrastructure “momentum”, making it increasingly hard to change direction.
+The more clients we added, the more data they produced, and the more timezones we had to operate in without any downtime.
+Before we knew it, we were expected to be running 24/7/365, and due to the nature of our business and customer base, not even
+Christmas is available for downtime. Crucially, the data for all our clients is stored in a single database, which is now
+nearly 500Gb in size, with some tables containing more than 1 billion rows.&lt;/p&gt;
+
+&lt;h1 id=&quot;pros-and-cons-of-the-current-infrastructure&quot;&gt;Pros and Cons of the current infrastructure&lt;/h1&gt;
+
+&lt;h2 id=&quot;pros&quot;&gt;Pros&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Updating database schema to make ready for new software updates is easy.  &lt;/li&gt;
+  &lt;li&gt;Easy to execute “global” queries that span all clients.  &lt;/li&gt;
+  &lt;li&gt;Backup and recovery is simple - just a single database, rather than 100s.  &lt;/li&gt;
+  &lt;li&gt;Easy to add new clients - no databases to create, no backup or maintenance scripts to modify.  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;cons&quot;&gt;Cons&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Single large database means most management operations take a very long time - backups, reindexing, etc.&lt;/li&gt;
+  &lt;li&gt;Single point of failure. (Although having multiple databases on the same RAID array probably means that all the
+databases will fail at the same time)&lt;/li&gt;
+  &lt;li&gt;Lack of flexibility - can’t move a client to their own dedicated server in order to improve performance for them or
+for others.&lt;/li&gt;
+  &lt;li&gt;Hard to delete a client’s data - many related tables to delete from, index locking while deletion is in progress etc.&lt;/li&gt;
+  &lt;li&gt;Hard to experiment with - 500Mb of data takes forever to move to another server, import into the cloud, etc, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;other-factors&quot;&gt;Other factors&lt;/h1&gt;
+&lt;p&gt;As well as deciding on whether to continue with the current multi-tenant design of the database infrastructure, other
+factors are also influencing our decision:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Resilience. A decade ago, having a few hours downtime once every few years was understandable. These days the fault
+tolerance and fall-over capabilities of SQL Server and SQL Azure make it almost imperative that the new infrastructure
+be able to cope with an entire server failing.&lt;/li&gt;
+  &lt;li&gt;Cloud v Hosted. We have been with our current hosted provider since the beginning and they have served us extremely
+well. However, the flexibility offered by Azure and AWS make it hard to ignore the potential of the cloud.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;options-for-the-next-5-10-years&quot;&gt;Options for the next 5-10 years&lt;/h1&gt;
+
+&lt;h2 id=&quot;continue-down-the-same-path&quot;&gt;Continue down the same path&lt;/h2&gt;
+&lt;p&gt;We could simply enlarge the database server. Take a day to schedule migration to a server that has 2-3 times the current capacity.&lt;/p&gt;
+
+&lt;h2 id=&quot;move-to-azure-and-continue-down-the-same-path&quot;&gt;Move to Azure and continue down the same path&lt;/h2&gt;
+&lt;p&gt;Rather than enlarging our own database server, we could start using Windows Azure VMs.&lt;/p&gt;
+
+&lt;h2 id=&quot;split-the-database-keep-a-single-sql-server&quot;&gt;Split the database, keep a single SQL Server&lt;/h2&gt;
+&lt;p&gt;There are many options for splitting the database - one per client, one per continent (so downtime is easier to schedule), or by some
+other arbitary property. All the options have several things in common:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There is no going back. As soon as the databases are split, each database will start their own primary key generation and there
+is bound to be overlap. Merging the databases back together would be a massively complex and slow operation, as each row would have
+to be “renumbered” as it was imported.&lt;/li&gt;
+  &lt;li&gt;The web application will have to be taught how to determine which database it should connect to when servicing a particular client.
+In addition, unauthenticated operations (such as logging in), will have to be able to identify which database to connect to without
+the benefit of a logged in identity.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;split-the-database-move-to-multiple-sql-servers&quot;&gt;Split the database, move to multiple SQL Servers&lt;/h2&gt;
+
+&lt;h2 id=&quot;split-the-database-move-to-azure-databases&quot;&gt;Split the database, move to Azure databases&lt;/h2&gt;
+
+&lt;h2 id=&quot;split-the-database-move-to-azure-vms&quot;&gt;Split the database, move to Azure VMs&lt;/h2&gt;
+
+</description>
+        <pubDate>Mon, 18 Aug 2014 17:20:34 +0100</pubDate>
+        <link>http://yourdomain.com/azure/2014/08/18/azure-migration.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/azure/2014/08/18/azure-migration.html</guid>
+        
+        
+        <category>azure</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome!</title>
+        <description>&lt;p&gt;More than 10 years ago, we created a SaaS web application using the excitingly new technologies of C# and ASP.NET
+backed by the less exciting but well understood SQL Server.&lt;/p&gt;
+
+&lt;p&gt;Unsurprisingly, technology has moved on amazingly since the first architectural decisions were made in 2003, and
+this blog attemopts to chronicle the challenges faced and lessons learned in the effort to feed and care for the
+application over this large timeframe.&lt;/p&gt;
+
+&lt;p&gt;Some of these lessons may be appropriate for new ventures starting out with the latest &amp;amp; greatest that technology
+has to offer, while some may only been useful to those who are in a similar boat of trying to slowly move &amp;amp; improve
+their ASP.NET technology without throwing everything away and starting again.&lt;/p&gt;
+
+&lt;p&gt;For that reason, I’ve christened this blog “The agile snowball”, to acknowledge the challenges in keeping a successful,
+and ever-growing web application agile enough to be able to take advantage of advancements in technology and
+methodology.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 17 Aug 2014 22:29:00 +0100</pubDate>
+        <link>http://yourdomain.com/general/2014/08/17/welcome.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/general/2014/08/17/welcome.html</guid>
+        
+        
+        <category>general</category>
+        
+      </item>
+    
+  </channel>
+</rss>
