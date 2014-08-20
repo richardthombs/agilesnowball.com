@@ -30,7 +30,7 @@ has two important consequences:
 1. They are quick to make and (typically) quite small.
 2. You need an unbroken chain of all the transaction log backups that lead from
 the most recent full or differential backup all the way forwards in time to the
-point of recovery.ALL of them, not just the most recent one.
+point of recovery... ALL of them, not just the most recent one.
 
 Both of these points are very important. Firstly, because of the speed, it's
 completely possible to schedule transaction log backups to occur every few
