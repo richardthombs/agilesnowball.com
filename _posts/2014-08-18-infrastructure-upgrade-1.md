@@ -3,6 +3,7 @@ layout: post
 title:  "Upgrading ASP.NET database infrastructure"
 date:   2014-08-18 19:15:22
 categories: aspnet sqlserver azure
+hidden: true
 ---
 
 # Introduction

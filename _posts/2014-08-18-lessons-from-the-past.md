@@ -3,6 +3,7 @@ layout: post
 title:  "Database design lessons"
 date:   2014-08-18 19:15:22
 categories: aspnet sqlserver
+hidden: true
 ---
 
 # Introduction
@@ -24,4 +25,3 @@ it's easy to identify rows to delete.
 
 This has the added advantage of making the database easy to [partition](http://msdn.microsoft.com/en-us/library/ms190787.aspx),
 should the evolution of the database architecture require it.
-
