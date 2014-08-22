@@ -48,11 +48,15 @@ and restore.
 -- Weekly backup
 backup database [Test] to disk='C:\Test.bak' with init
 backup log [Test] to disk='C:\Test.trn' with init
+{% endhighlight %}
 
+{% highlight sql %}
 -- Daily backup
 backup database [Test] to disk='C:\Test.dif' with init,differential
 backup log [Test] to disk='C:\Test.trn' with init
+{% endhighlight %}
 
+{% highlight sql %}
 -- 15 minute backup
 backup log [Test] to disk='C:\Test.trn'
 {% endhighlight %}
@@ -74,21 +78,90 @@ of the transaction logs you need to restore.
 If you are using the above scripts, then you will have three backup files to
 restore.
 
-{% highlight sql %}
+Firstly the full and differential backups should be restored, leaving the
+database unrecovered so that you can then restore the log backups:
 
+{% highlight sql %}
 -- Restore the full and differential backups
 restore database [Test] from disk='C:\Test.bak' with norecovery
 restore database [Test] from disk='C:\Test.dif' with norecovery
+{% endhighlight %}
 
+The backup script above ensures that all the transaction log backups are in
+the same file, and that it only contains backups that come after the last
+full / differential backup. This makes it easy to identify which transaction
+log backups to restore - you need to restore all of them!
+
+To see how many transaction log backups there are:
+
+{% highlight sql %}
 -- See how many files are in the transaction log backup
 restore headeronly from disk='C:\Test.trn'
+{% endhighlight %}
 
+Then restore each transaction log backup. Each `restore database` command
+restores an individual transaction log backup. You have to issue one command
+for each transaction log backup:
+
+{% highlight sql %}
 -- Restore each transaction log backup in turn
 restore database [Test] from disk='C:\Test.trn' file=1 with norecovery
 restore database [Test] from disk='C:\Test.trn' file=2 with norecovery
 -- (Repeat for each backup in the set, note the incrementing file value)
+{% endhighlight %}
 
+Then finally the database can be recovered and brought back online:
+
+{% highlight sql %}
 -- Bring the database back online
 restore database [Test] with recovery
-
 {% endhighlight %}
+
+# Switching recovery models
+
+Switching between recovery models is easy, and it can be done on a large, in-use
+database in a matter of moments.
+
+{% highlight sql %}
+-- Configure database to use the full recovery model
+alter database [Test] set recovery full
+{% endhighlight %}
+
+However, until another full backup is performed, the database will remain in _pseudo
+simple recovery mode_, where the transaction log is truncated whenever a
+database checkpint occurs. As soon as the first full backup is completed, the
+expected behaviour of full recovery mode begins.
+
+{% highlight sql %}
+-- Full database backup
+backup database [Test] to disk='C:\Test.bak'
+{% endhighlight %}
+
+_See [The Accidental DBA](http://www.sqlskills.com/blogs/paul/the-accidental-dba-day-30-of-30-troubleshooting-transaction-log-growth)
+for more details._
+
+# How big will my log files grow?
+Provided that you are performing regular full, differential AND log backups,
+then transaction logs will grow no larger than in simple recovery mode. In fact,
+because you will probably be performing log backups with a far higher frequency
+than you were previously performing differential backups, then the transaction
+log might actually end up being smaller (although you will have to shrink the
+log file to find out for sure).
+
+# How long will the first log backup take?
+
+You should have performed a full backup as soon as you switched over to
+full recovery, so the after that backup has completed, the first log backup
+will be relatively fast.
+
+# Scheduling database backups vs transaction log backups
+
+According to [this question](https://dba.stackexchange.com/questions/4347/should-i-stop-transaction-log-backups-during-a-full-backup?newreg=e43f8aa2e1814058bde408db1eda3a1d) on StackExchange, it is perfectly possible to have
+database backups and transaction log backups running at the same time, so it is
+not necessary to make any effort stopping one running when the other is active.
+
+It also doesn't matter if you accidentally schedule a full backup and a
+differential database backup to run at the same time - the differential will
+block until the full backup has completed and then execute. The completed
+differential backup will use the full backup that just finished as it's
+baseline too.
