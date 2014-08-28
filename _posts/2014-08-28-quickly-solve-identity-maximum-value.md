@@ -35,11 +35,11 @@ maybe going from int -> bigint, which is 64-bit.
 alter table [Test] alter column [TestID] bigint
 {% endhighlight %}
 
-But this will require exclusive access to the table, and if you've really got
+This will require exclusive access to the table and if you've really got
 2 billion rows in there, then it will take a significant amount of time and
 disc space to complete.
 
-But there is another way. 'int' is a signed value, and the initial declaration
+However there is another way... 'int' is a signed value and the initial declaration
 of the identity used the classic `(1,1)`, meaning start at 1 and increment. But
 what about the negative values? If your application code can handle it, then
 you can instantly start using the "other" 2 billion identity values that range
