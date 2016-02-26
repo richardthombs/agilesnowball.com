@@ -9,6 +9,8 @@ While trying to migrate our database server from a dedicated server to a pair
 of Azure VMs, we did a lot of research about how to best configure the VMs
 and SQL Server.
 
+_Update: All of these concerns have been rendered moot by the truly excellent Azure Premium Local Storage._
+
 ### Storage Account configuration
 1. 500 IOPS limit per virtual disk.
 1. 20,000 IOPS limit per storage account.
