@@ -1,7 +1,7 @@
 # Site settings
 author: Richard Thombs
 title: Agile Snowball
-email: richard@teamhaven.com
+email: richard@gearstone.uk
 description: > # this means to ignore newlines until "baseurl:"
   Lessons learned and challenges faced in trying to keep an ASP.NET and
   SQL Server web application agile enough to take advantage of the latest
