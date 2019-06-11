@@ -2,7 +2,6 @@
 layout: post
 title:  "Implementing multi-tennancy"
 date:   2014-08-18 22:16:00
-categories: aspnet sqlserver
 hidden: true
 ---
 

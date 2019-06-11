@@ -2,7 +2,6 @@
 layout: post
 title:  "Database design lessons"
 date:   2014-08-18 19:15:22
-categories: aspnet sqlserver
 hidden: true
 ---
 

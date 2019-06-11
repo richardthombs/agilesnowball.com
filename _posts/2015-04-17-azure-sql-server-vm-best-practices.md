@@ -2,7 +2,6 @@
 layout: post
 title:  "Azure SQL Server VM Best Practices"
 date:   2015-04-17 09:33:00
-categories: azure
 ---
 
 While trying to migrate our database server from a dedicated server to a pair

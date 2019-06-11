@@ -2,7 +2,6 @@
 layout: post
 title:  "SQL Azure gotchas"
 date:   2014-09-08 10:29:00
-categories: azure
 ---
 
 # 1. Inserts will fail on tables without clustered indexes

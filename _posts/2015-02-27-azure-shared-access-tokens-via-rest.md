@@ -2,7 +2,6 @@
 layout: post
 title:  "How to use Azure Storage Queues and Shared Access Signatures via the REST API"
 date:   2015-02-27 09:26:00
-categories: azure
 ---
 
 Azure's [Shared Access Signatures](https://msdn.microsoft.com/en-us/library/azure/ee395415.aspx)

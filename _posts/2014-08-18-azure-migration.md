@@ -2,7 +2,6 @@
 layout: post
 title:  "Migrating a large scale traditional ASP.NET & SQL Server web application to Azure"
 date:   2014-08-18 16:20:34
-categories: azure
 hidden: true
 ---
 # Introduction

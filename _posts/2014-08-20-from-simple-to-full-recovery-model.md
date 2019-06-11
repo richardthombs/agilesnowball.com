@@ -2,7 +2,6 @@
 layout: post
 title:  "From simple to full recovery model in SQL Server"
 date:   2014-08-20 13:42:00
-categories: sqlserver
 ---
 
 Have you got a highly utilised SQL Server database that you're backing up with
