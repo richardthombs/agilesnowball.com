@@ -2,7 +2,6 @@
 layout: post
 title:  "Building a Kubernetes cluster on DigitalOcean to host websites and backend services"
 date:   2019-05-30 14:00:00
-categories: kubernetes nginx letsencrypt certificates nginx-ingress cert-manager digitalocean
 ---
 
 # Introduction
