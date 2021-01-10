@@ -15,3 +15,5 @@ github_username:  richardthombs
 markdown: kramdown
 highlighter: rouge
 encoding: "utf-8"
+kramdown:
+  input: GFM
