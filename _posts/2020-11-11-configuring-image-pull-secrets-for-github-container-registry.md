@@ -19,7 +19,7 @@ kubectl create secret docker-registry <SECRET NAME> \
   -n <NAMESPACE>
   --docker-server=docker.pkg.github.com \
   --docker-username=<GITHUB USERNAME> \
-  --docker-password=<GITHUB TOKEN>
+  --docker-password=<GITHUB TOKEN> \
   --docker-email=<GITHUB EMAIL>
 ```
 
