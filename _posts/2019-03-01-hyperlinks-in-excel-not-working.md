@@ -26,13 +26,13 @@ Excel doesn't seem to do any verification of the contents of the requests it mak
 
 There are several ways of solving this problem.
 
-## 1. Stop Excel from behaving this way
+### 1. Stop Excel from behaving this way
 
 Your users can set a [registry key](https://support.microsoft.com/en-gb/help/218153/error-message-when-clicking-hyperlink-in-office-cannot-locate-the-inte) to prevent Excel from behaving this way.
 
 Obviously this is not a very customer-friendly thing to do!
 
-## 2. Identify these requests coming from Excel and respond appropriately
+### 2. Identify these requests coming from Excel and respond appropriately
 Either your web server or your web application can be configured to identity requests coming from Excel and to return a success response rather than trying to process them normally.
 
 The HEAD request uses a UserAgent string that looks similar to this:

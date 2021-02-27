@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body class="min-h-screen bg-gray-900 text-gray-100 sm:p-16">
 
-    {% include header.html %}
+  <div class="sm:max-w-4xl sm:mx-auto sm:rounded-lg sm:overflow-hidden">
 
-    <div class="page-content">
-      <div class="wrapper">
+    <!-- Main -->
+    <div>
+      {% include header.html %}
+
+      <main class="bg-gray-100 text-gray-800">
         {{ content }}
-      </div>
+      </main>
+    </div>
+    <!-- Sidebar -->
+    <div class="bg-gray-600 text-gray-200">
+      {% include footer.html %}
     </div>
 
-    {% include footer.html %}
+  </div>
 
-    {% include analytics.html %}
+  {% include analytics.html %}
 
-  </body>
+</body>
 
 </html>

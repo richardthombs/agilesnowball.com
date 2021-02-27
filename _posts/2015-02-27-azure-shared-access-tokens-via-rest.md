@@ -11,7 +11,7 @@ having to share your account keys.
 First, here is some simple C# code that creates an Azure Storage Queue
 and creates a Shared Access Signature with Read and ProcessMessages permissions.
 
-{% highlight c# %}
+```c#
 string queueName = "myqueue";
 string storageAccount = "UseDevelopmentStorage=true";
 
@@ -33,26 +33,26 @@ var policy = new SharedAccessQueuePolicy
 var sas = queue.GetSharedAccessSignature(policy);
 
 Console.WriteLine(sas);
-{% endhighlight %}
+```
 
 The resulting Shared Access Signature is actually a URL Query String fragment:
 
-{% highlight text %}
+```
 ?sv=2014-02-14&sig=8CtFprtQUJyGZls%2FiqHiEyp2390IdXZc3zC7QSb7bDU%3D&se=2015-02-28T09%3A39%3A13Z&sp=rp
-{% endhighlight %}
+```
 
 We can incorporate this signature into requests that we make via the Azure REST
 API which manipulate the queue. For example, to peek at the next message in the
 queue:
 
-{% highlight sh %}
+```sh
 curl http://127.0.0.1:10001/devstoreaccount1/myqueue/messages \
   ?sv=2014-02-14 \
   &sig=8CtFprtQUJyGZls%2FiqHiEyp2390IdXZc3zC7QSb7bDU%3D \
   &se=2015-02-28T09%3A39%3A13Z \
   &sp=rp \
   &peekonly=true
-{% endhighlight %}
+```
 
 That's a big URL, but most of it is the address of the Azure server, the path to
 the queue and the Shared Access Signature itself.
@@ -60,16 +60,16 @@ the queue and the Shared Access Signature itself.
 In order to find the host and path required to connect to the queue, you can
 use the CloudQueue's `StorageUri` property:
 
-{% highlight c# %}
+```c#
 var queueUri = queue.StorageUri.PrimaryUri;
 Console.WriteLine(queueUri);
-{% endhighlight %}
+```
 
 On a development machine, this will return something like:
 
-{% highlight text %}
+```
 http://127.0.0.1:10001/devstoreaccount1/myqueue
-{% endhighlight %}
+```
 
 This is then composed along with whatever additional URL and Query String
 fragments the [Azure REST API](https://msdn.microsoft.com/library/azure/dd179363.aspx) specifies, so for the example above, that was

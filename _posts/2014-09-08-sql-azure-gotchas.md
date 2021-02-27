@@ -14,28 +14,28 @@ We had a few tables in our database where there wasn't a clustered index defined
 
 For example:
 
-{% highlight sql %}
+```sql
 -- This works fine
 create table Test
 (
   Value int not null
 )
-{% endhighlight %}
+```
 
-{% highlight sql %}
+```sql
 -- But this will fail
 insert into Test values(1)
-{% endhighlight %}
+```
 
 This is obviously very easy to fix... create a clustered index and all is well:
 
-{% highlight sql %}
+```sql
 -- Until you create a clustered index
 create clustered index IX_Value on Test (Value)
 
 -- Inserts now work!
 insert into Test values(1)
-{% endhighlight %}
+```
 
 # 2. SELECT INTO is not supported
 
@@ -43,9 +43,9 @@ So fixing the lack of clustered indexes in your database is pretty easy, but the
 
 Eg:
 
-{% highlight sql %}
+```sql
 select Value into #Temp from Test
-{% endhighlight %}
+```
 
 Then you will get a pretty blunt error: Statement 'SELECT INTO' is not supported in this version of SQL Server.
 

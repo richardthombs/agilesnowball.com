@@ -1,0 +1,63 @@
+---
+---
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./solarized-dark.scss";
+
+@import url('https://rsms.me/inter/inter.css');
+  html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+.post-content {
+
+  h1 { @apply text-3xl mt-10 mb-2;}
+  h2 { @apply text-2xl mt-8 mb-2; }
+  h3 { @apply text-xl mt-6 mb-2; }
+
+  > p + p {
+    @apply mt-4 leading-relaxed;
+  }
+
+  > ol {
+    @apply list-decimal ml-8 mb-4;
+
+    > li {
+      @apply mt-4;
+    }
+  }
+
+  > ul {
+    @apply list-decimal ml-8;
+
+    > li {
+      @apply mt-4;
+    }
+  }
+
+  > blockquote {
+    @apply border-l-4 border-amber-700 pl-2 my-4;
+  }
+
+  a {
+    @apply text-amber-700 font-semibold hover:underline;
+  }
+
+  code.highlighter-rouge {
+    @apply border border-gray-300 bg-gray-200 rounded text-sm;
+    padding: .1em .2em
+  }
+
+  div.highlighter-rouge {
+    @apply my-4;
+
+    > div.highlight {
+      @apply p-4 rounded shadow;
+      @apply overflow-x-auto;
+    }
+  }
+}

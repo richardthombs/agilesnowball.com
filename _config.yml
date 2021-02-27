@@ -1,19 +1,15 @@
-# Site settings
-author: Richard Thombs
-title: Agile Snowball
-email: richard@gearstone.uk
-description: > # this means to ignore newlines until "baseurl:"
-  Lessons learned and challenges faced in trying to keep an ASP.NET and
-  SQL Server web application agile enough to take advantage of the latest
-  tools, technologies and methodologies.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://agilesnowball.com" # the base hostname & protocol for your site
-twitter_username: stonyuk
-github_username:  richardthombs
+url: "https://agilesnowball.com"
+baseurl: ""
+title: "Agile Snowball"
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-encoding: "utf-8"
-kramdown:
-  input: GFM
+author: "Richard Thombs"
+email: "richard@gearstone.uk"
+github_username: "richardthombs"
+twitter_username: "stonyuk"
+description: "Lessons learned and challenges faced in trying to keep an ASP.NET and SQL Server web application agile enough to take advantage of the latest tools, technologies and methodologies."
+
+permalink: /:year/:title:output_ext
+
+plugins:
+  - jekyll-postcss
+#  - jekyll-feed
