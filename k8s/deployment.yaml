@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agilesnowball-website
+  labels:
+    app: agilesnowball
+    tier: website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agilesnowball
+      tier: website
+  template:
+    metadata:
+      labels:
+        app: agilesnowball
+        tier: website
+    spec:
+      containers:
+      - name: agilesnowball-website
+        image: docker.pkg.github.com/richardthombs/agilesnowball.com/agilesnowball-website:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+        - name: github

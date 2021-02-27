@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: agilesnowball-ingress
+  labels:
+    app: agilesnowball
+    tier: ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+spec:
+  tls:
+  - hosts:
+    - agilesnowball.com
+    - www.agilesnowball.com
+    secretName: agilesnowball-tls
+  rules:
+  - host: agilesnowball.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: agilesnowball-website
+            port:
+              number: 80
