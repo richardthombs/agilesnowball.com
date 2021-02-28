@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdown";
 
@@ -10,6 +12,10 @@ import FriendlyDate from "../../components/date";
 export default function Post({ post }) {
 	return (
 		<Layout>
+			<Head>
+				<title>{post.title}</title>
+				<link rel="canonical" href={`https://agilesnowball.com/posts/${post.slug}`}></link>
+			</Head>
 			<div className="bg-gray-100 text-gray-800 p-4 sm:px-16 sm:py-8">
 				<div className="mb-4">
 					<h1 className="text-3xl leading-normal">{post.title}</h1>
