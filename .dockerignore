@@ -1,3 +1,2 @@
-*
-!_site
-!nginx.conf
+node_modules
+.next
