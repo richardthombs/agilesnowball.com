@@ -2,7 +2,6 @@
 layout: post
 title:  "Configuring image pull secrets for GitHub Container Registry / GitHub Packages Docker Registry"
 date:   2020-11-11 09:36:00
-categories: kubernetes docker github
 ---
 
 ## 1. Generate a GitHub Personal Access Token
