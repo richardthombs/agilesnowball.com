@@ -15,6 +15,7 @@ export default function Post({ post }) {
 			<Head>
 				<title>{post.title}</title>
 				<link rel="canonical" href={`https://agilesnowball.com/posts/${post.slug}`}></link>
+				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
 			<div className="bg-gray-100 text-gray-800 p-4 sm:px-16 sm:py-8">
 				<div className="mb-4">
