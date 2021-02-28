@@ -17,7 +17,7 @@ export function getPostBySlug(slug): any {
 	return {
 		slug: realSlug,
 		title: data.title,
-		date: JSON.stringify(data.date),
+		date: data.date,
 		hidden: data.hidden || false,
 		content: content
 	};
@@ -28,7 +28,6 @@ export function getAllPosts() {
 	const posts = slugs
 		.map(slug => getPostBySlug(slug))
 		.filter(x => x.hidden !== true)
-		.map(post => { post.date = JSON.parse(post.date); return post; })
 		.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));// sort posts by date in descending order
 	return posts;
 }
