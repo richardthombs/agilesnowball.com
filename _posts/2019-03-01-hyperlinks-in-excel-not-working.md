@@ -60,7 +60,7 @@ With IIS for example, you can use the following web.config setting:
 
 Or you could add code directly into your Web API actions:
 
-```c#
+```cs
 [Route("blah/blah")]
 public IHttpActionResult Get()
 {
@@ -72,7 +72,7 @@ public IHttpActionResult Get()
 
 Or you could write an ActionFilter:
 
-```c#
+```cs
 using System.Net;
 using System.Net.Http;
 using System.Web.Http.Controllers;

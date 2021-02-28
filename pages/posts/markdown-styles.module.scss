@@ -1,0 +1,52 @@
+.markdown {
+  h1 {
+    @apply text-3xl mt-10 mb-2;
+  }
+
+  h2 {
+    @apply text-2xl mt-8 mb-2;
+  }
+
+  h3 {
+    @apply text-xl mt-6 mb-2;
+  }
+
+  > p + p {
+    @apply mt-4 leading-relaxed;
+  }
+
+  > ol {
+    @apply list-decimal ml-8 mb-4;
+    > li {
+      @apply mt-4;
+    }
+  }
+
+  > ul {
+    @apply list-decimal ml-8;
+    > li {
+      @apply mt-4;
+    }
+  }
+
+  > blockquote {
+    @apply border-l-4 border-amber-700 pl-2 my-4;
+  }
+
+  a {
+    @apply text-amber-700 font-semibold hover:underline;
+  }
+
+  p > code {
+    @apply border border-gray-300 bg-gray-200 rounded text-sm;
+    padding: .1em .2em;
+  }
+
+  pre {
+    @apply text-gray-100 bg-gray-700;
+    @apply my-4;
+    @apply p-4 rounded shadow;
+    @apply overflow-x-auto;
+  }
+
+}

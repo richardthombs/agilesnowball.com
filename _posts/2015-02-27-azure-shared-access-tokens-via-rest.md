@@ -11,7 +11,7 @@ having to share your account keys.
 First, here is some simple C# code that creates an Azure Storage Queue
 and creates a Shared Access Signature with Read and ProcessMessages permissions.
 
-```c#
+```cs
 string queueName = "myqueue";
 string storageAccount = "UseDevelopmentStorage=true";
 
@@ -60,7 +60,7 @@ the queue and the Shared Access Signature itself.
 In order to find the host and path required to connect to the queue, you can
 use the CloudQueue's `StorageUri` property:
 
-```c#
+```cs
 var queueUri = queue.StorageUri.PrimaryUri;
 Console.WriteLine(queueUri);
 ```

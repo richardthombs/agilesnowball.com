@@ -15,11 +15,11 @@ Read the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/
 [Kubernetes docs](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-by-providing-credentials-on-the-command-line)  
 
 ```powershell
-kubectl create secret docker-registry <SECRET NAME> \
+kubectl create secret docker-registry <SECRET NAME>
   -n <NAMESPACE>
-  --docker-server=docker.pkg.github.com \
-  --docker-username=<GITHUB USERNAME> \
-  --docker-password=<GITHUB TOKEN> \
+  --docker-server=docker.pkg.github.com
+  --docker-username=<GITHUB USERNAME>
+  --docker-password=<GITHUB TOKEN>
   --docker-email=<GITHUB EMAIL>
 ```
 
