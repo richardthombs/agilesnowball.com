@@ -29,6 +29,7 @@ export default function HomePage({ allPosts }) {
 }
 
 export async function getStaticProps() {
-	const allPosts = getAllPosts();
+	const allPosts = getAllPosts()
+		.map(post => { return { title: post.title, date: post.date, slug: post.slug } }); // Strip props to bare minimum
 	return { props: { allPosts } };
 }
