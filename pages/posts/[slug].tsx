@@ -17,7 +17,7 @@ export default function Post({ post }) {
 				<link rel="canonical" href={`https://agilesnowball.com/posts/${post.slug}`}></link>
 				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
-			<div className="bg-gray-100 text-gray-800 p-4 sm:px-16 sm:py-8">
+			<div className="bg-gray-100 px-4 py-8 sm:px-16 space-y-8 sm:space-y-8">
 				<div className="mb-4">
 					<h1 className="text-3xl leading-normal">{post.title}</h1>
 					<div className="text-gray-600 mt-2"><FriendlyDate date={post.date}></FriendlyDate></div>

@@ -16,7 +16,7 @@ export default function HomePage({ allPosts }) {
 				<title>Agile Snowball</title>
 				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
-			<ul className="bg-gray-100 px-4 sm:px-16 sm:py-8 space-y-4 sm:space-y-8">
+			<ul className="bg-gray-100 px-4 py-8 sm:px-16 space-y-8 sm:space-y-8">
 				{posts.map(post => (
 					<li key={post.slug}>
 						<Link href={`/posts/${post.slug}`}>
