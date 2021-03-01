@@ -12,15 +12,17 @@ import FriendlyDate from "../../components/date";
 export default function Post({ post }) {
 	return (
 		<Layout>
+
 			<Head>
 				<title>{post.title}</title>
-				<link rel="canonical" href={`https://agilesnowball.com/posts/${post.slug}`}></link>
+				<link rel="canonical" href={`https://agilesnowball.com/blog/${post.slug}`}></link>
 				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
-			<div className="bg-gray-100 px-4 py-8 sm:px-16 space-y-8 sm:space-y-8">
-				<div className="mb-4">
-					<h1 className="text-3xl leading-normal">{post.title}</h1>
-					<div className="text-gray-600 mt-2"><FriendlyDate date={post.date}></FriendlyDate></div>
+
+			<div className="bg-gray-100 px-4 py-8 sm:p-16 space-y-8 sm:space-y-8">
+				<div className="mb-12">
+					<h1 className="text-4xl font-semibold tracking-tight leading-tight">{post.title}</h1>
+					<div className="text-gray -600 mt-2">By Richard Thombs on <FriendlyDate date={post.date}></FriendlyDate></div>
 				</div>
 				<div className={markdownStyles.markdown} dangerouslySetInnerHTML={{ __html: post.content }} ></div>
 			</div>
