@@ -24,7 +24,8 @@ export default function HomePage({ allPosts }) {
 					Hi, I'm Richard Thombs
 				</h1>
 				<div className="text-gray-600 mb-16">
-					I'm a developer and have been ever since I got my first computer back in 1982 (a BBC model "A"). I've beaten Colossal Cave,
+					I'm a developer and have been ever since I got my first computer back in 1982 (a BBC model "A").
+					I've beaten <a className="font-medium" href="https://grack.com/demos/adventure" rel="nofollow" target="new">Colossal Cave</a>,
 					dabbled in a bit of MUD and even helped email addresses change from ! to @.
 				</div>
 
@@ -47,23 +48,23 @@ export default function HomePage({ allPosts }) {
 
 				<h1 className="text-3xl font-bold mt-12 mb-4">Projects</h1>
 
-				<ul className="grid grid-cols-2 gap-8">
+				<ul className="grid sm:grid-cols-2 gap-8">
 					<li className="border border-gray-300 rounded shadow-sm px-8 py-4">
-						<a href="https://retailarmy.com" target="new">
+						<a href="https://retailarmy.com" target="_blank">
 							<div className="text-lg font-bold">Retail Army</div>
 							<div className="text-gray-600">A recruitment portal for field marketing companies.</div>
 						</a>
 					</li>
 
 					<li className="border border-gray-300 rounded shadow-sm px-8 py-4">
-						<a href="https://satis.app" target="new">
+						<a href="https://satis.app" target="_blank">
 							<div className="text-lg font-bold">Satis</div>
 							<div className="text-gray-600">Quick and easy in-store customer satisfaction capture.</div>
 						</a>
 					</li>
 
 					<li className="border border-gray-300 rounded shadow-sm px-8 py-4">
-						<a href="https://scunpacked.com" target="new">
+						<a href="https://scunpacked.com" target="_blank">
 							<div className="text-lg font-bold">SCunpacked</div>
 							<div className="text-gray-600">A Star Citizen data exploration tool.</div>
 						</a>
