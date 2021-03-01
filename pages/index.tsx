@@ -49,21 +49,21 @@ export default function HomePage({ allPosts }) {
 				<h1 className="text-3xl font-bold mt-12 mb-4">Projects</h1>
 
 				<ul className="grid sm:grid-cols-2 gap-8">
-					<li className="border border-gray-300 rounded shadow-sm px-8 py-4">
+					<li className="border border-gray-300 bg-gray-50 rounded shadow-sm px-8 py-4">
 						<a href="https://retailarmy.com" target="_blank">
 							<div className="text-lg font-bold">Retail Army</div>
 							<div className="text-gray-600">A recruitment portal for field marketing companies.</div>
 						</a>
 					</li>
 
-					<li className="border border-gray-300 rounded shadow-sm px-8 py-4">
+					<li className="border border-gray-300 bg-gray-50 rounded shadow-sm px-8 py-4">
 						<a href="https://satis.app" target="_blank">
 							<div className="text-lg font-bold">Satis</div>
 							<div className="text-gray-600">Quick and easy in-store customer satisfaction capture.</div>
 						</a>
 					</li>
 
-					<li className="border border-gray-300 rounded shadow-sm px-8 py-4">
+					<li className="border border-gray-300 bg-gray-50 rounded shadow-sm px-8 py-4">
 						<a href="https://scunpacked.com" target="_blank">
 							<div className="text-lg font-bold">SCunpacked</div>
 							<div className="text-gray-600">A Star Citizen data exploration tool.</div>
