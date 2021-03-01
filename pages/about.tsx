@@ -16,7 +16,7 @@ export default function About() {
 
 						<p>
 							He was the co-founder and Chief Architect at <a className="link" href="https://www.teamhaven.com">TeamHaven</a> and now
-							provides product development services through his consultancy company <a className="link" href="https://gearstone.uk">Gearstone Technology</a>.
+							helps companies create web-based products through his consulting company <a className="link" href="https://gearstone.uk">Gearstone Technology</a>.
 						</p>
 					</div>
 				</div>

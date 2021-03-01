@@ -17,3 +17,7 @@ html {
 .link {
   @apply text-amber-700 font-semibold hover:underline;
 }
+
+.break-avoid {
+  page-break-inside: avoid;
+}
