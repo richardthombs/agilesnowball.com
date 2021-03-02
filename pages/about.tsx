@@ -9,7 +9,9 @@ export default function About() {
 			<main className="bg-gray-100 text-gray-800 px-4 py-8 sm:p-16">
 
 				<div className="sm:flex space-y-4 sm:space-y-0 sm:space-x-16">
-					<img className="rounded w-32" src="http://www.gravatar.com/avatar/f413eba6a4985222aeb8328e92ae89c6.png?s=128" alt="Richard's photo" />
+					<div className="flex-shrink-0 mt-1">
+						<img className="rounded w-32 h-auto" src="http://www.gravatar.com/avatar/f413eba6a4985222aeb8328e92ae89c6.png?s=128" alt="Richard's photo" />
+					</div>
 
 					<div className="space-y-4 leading-relaxed">
 						<p>
