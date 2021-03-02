@@ -15,7 +15,7 @@ export default function HomePage({ allPosts }) {
 
 			<PageMeta
 				title="Richard Thombs"
-				description="Full stack developer and an experienced technologist who thrives on creating new products."
+				description="Full stack developer and experienced technologist who thrives on creating new products."
 			/>
 
 			<div className="bg-gray-100 px-4 py-8 sm:px-16 sm:py-16">

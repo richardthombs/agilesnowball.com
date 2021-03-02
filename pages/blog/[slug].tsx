@@ -15,7 +15,7 @@ export default function Post({ post }) {
 			<PageMeta
 				title={post.title}
 				type="article"
-				description=""
+				description={post.description}
 			/>
 
 			<div className="bg-gray-100 px-4 py-8 sm:p-16 space-y-8 sm:space-y-8">

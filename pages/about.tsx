@@ -4,7 +4,7 @@ import PageMeta from "../components/page-meta";
 export default function About() {
 	return (
 		<Layout>
-			<PageMeta />
+			<PageMeta description="Richard Thombs is a software development professional with 30 years experience in application development and infrastructure design." />
 
 			<main className="bg-gray-100 text-gray-800 px-4 py-8 sm:p-16">
 
