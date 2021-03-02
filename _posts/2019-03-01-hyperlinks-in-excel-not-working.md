@@ -10,17 +10,14 @@ Excel handles hyperlinks in an unexpected manner which can often lead to confusi
 
 Depending on how your web application behaves when processing requests, when a user clicks on a link in Excel, you might get an error similar to this:
 
-`Unable to open <url>. Cannot download the information requested.`
-
-or
-
+`Unable to open <url>. Cannot download the information requested.` or  
 `Unable to open <url>. The internet site reports that the item you requested could not be found. (HTTP 1.0/404)`
 
-This is because rather than Excel just passing the URL over the user's default browser to open, it is instead attempting to verify that the URL exists first, which it does by sending a HEAD request followed by a GET request. If the HEAD returns an error other than a 405 (Not Supported) or if the GET request fails, then Excel will display an error to the user. However, if they succeed then Excel will finally allow the default browser to open the URL and all is well.
+This is because rather than Excel just passing the URL over to the user's default browser to open it is instead attempting to verify that the URL exists first, which it does by sending a HEAD request followed by a GET request. If the HEAD returns an error other than a 405 (Not Supported) or if the GET request fails, then Excel will display an error to the user. If they succeed then Excel will finally allow the default browser to open the URL and all is well.
 
-The chances of these requests legitimately succeeding by themselves are slim, because Excel is making these requests with its own HTTP client which won't have any authentication cookies stored in it, so unless these links will work anonymously, they will fail.
+The chance of these requests succeeding by themselves is slim because Excel is making these requests with its own HTTP client which won't have any authentication cookies stored in it, so unless the linked pages don't require any authentication they will fail.
 
-Excel doesn't seem to do any verification of the contents of the requests it makes, you can return totally empty response bodies or anything else at all. This is why if your web application simply returns the login page for such requests, then rather than getting an error message, everything might work as expected.
+Excel doesn't seem to do any verification of the responses it receives so you can return a totally empty response body or anything else at all.
 
 ## Solutions
 

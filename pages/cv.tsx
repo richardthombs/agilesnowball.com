@@ -12,7 +12,7 @@ export default function CV() {
 
 					<main>
 						<h2 className="text-lg text-gray-500 border-b border-gray-300 mb-2">Personal statement</h2>
-						<div className="prose">
+						<div className="leading-relaxed">
 							An experienced technologist who thrives on creating new products. I am looking for a senior role at a start-up or small business,
 							preferably somewhere with a fast-moving entrepreneurial mindset.
 						</div>
@@ -28,15 +28,13 @@ export default function CV() {
 								<article className="ml-8 pt-0 break-avoid">
 									<h3 className="font-semibold">Founder</h3>
 									<h4 className="text-gray-500 text-sm">Gearstone Technology</h4>
-									<div className="prose mt-2">
-										<div className="prose">
-											Started a company specialising in helping companies to develop web-based products:
+									<div className="leading-relaxed mt-2">
+										Started a company specialising in helping companies to develop web-based products:
 											<ul className="list-disc list-outside ml-5 mt-2">
-												<li>A recruitment platform focused on the needs of the merchandising and field marketing industries.</li>
-												<li>An app for capturing customer satisfaction.</li>
-												<li>A dashboard designer and reporting system.</li>
-											</ul>
-										</div>
+											<li>A recruitment platform focused on the needs of the merchandising and field marketing industries.</li>
+											<li>An app for capturing customer satisfaction.</li>
+											<li>A dashboard designer and reporting system.</li>
+										</ul>
 									</div>
 								</article>
 							</div>
@@ -47,7 +45,7 @@ export default function CV() {
 								<article className="ml-8 pt-8 break-avoid">
 									<h3 className="font-semibold">Founder &amp; Chief Architect</h3>
 									<h4 className="text-gray-500 text-sm">TeamHaven</h4>
-									<div className="prose mt-2">
+									<div className="leading-relaxed mt-2">
 										Co-founded a field management &amp; data-collection company, pioneering phone and tablet-based data collection for field workers.
 										This involved everything from concept design to building the product, as well as collaborating on marketing and sales. Over nearly 15 years,
 										I kept the product fresh by adopting new technology along the way, improving the maintainability of the code and implementing build, test,
@@ -62,7 +60,7 @@ export default function CV() {
 								<article className="ml-8 pt-8 break-avoid">
 									<h3 className="font-semibold">Director of Information Solutions</h3>
 									<h4 className="text-gray-500 text-sm">Mosaic Retail Solutions</h4>
-									<div className="prose mt-2">
+									<div className="leading-relaxed mt-2">
 										I relocated to California to work with Mosaic Retail Solutions. They needed strategic technical direction and a solid application infrastructure which I was able to deliver.
 										In my two and a half years with them, our data collection and information reporting systems became one of the best in the industry, with many client wins coming as a direct
 										result of their capabilities.
@@ -76,7 +74,7 @@ export default function CV() {
 								<article className="ml-8 pt-8 break-avoid">
 									<h3 className="font-semibold">Technical Director</h3>
 									<h4 className="text-gray-500 text-sm">Europa Merchant Services</h4>
-									<div className="prose mt-2">
+									<div className="leading-relaxed mt-2">
 										I was responsible for the development of an information systems team to provide systems administration as well as internal and customer-facing software development services.
 										As EMS was small, it was possible to be deeply involved in all aspects of running the company and I gained a good deal of commercial experience.
 										During this time I ran three very crucial parts of the operation – merchandiser support, client reporting and information systems.
@@ -89,7 +87,7 @@ export default function CV() {
 
 					<section>
 						<h2 className="text-lg text-gray-600 border-b border-gray-300 mb-2">Summary</h2>
-						<div className="prose">
+						<div className="leading-relaxed">
 							I am an articulate information technologist, specialising in product-focused development.
 							I have founded my own company and have also worked for companies ranging from small businesses to multi-nationals.
 							This has given me a wide range of professional and commercial experience.
@@ -138,6 +136,11 @@ export default function CV() {
 								<span className="inline-block bg-gray-200 text-gray-800 rounded text-center mr-2 mb-2 px-2 py-1">SQL Server</span>
 							</div>
 						</div>
+					</section>
+
+					<section>
+						<h2 className="text-lg text-gray-400 font-light">Blog</h2>
+						<a className="block font-light" href="https://agilesnowball.com">agilesnowball.com</a>
 					</section>
 				</footer>
 			</div>

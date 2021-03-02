@@ -3,8 +3,8 @@ import Head from "next/head";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdown";
 
-import markdownStyles from "./markdown-styles.module.scss";
 import "prism-solarized-dark/prism-solarizeddark.css";
+import markdownStyles from "./markdown-styles.module.scss";
 
 import Layout from "../../components/layout";
 import FriendlyDate from "../../components/date";

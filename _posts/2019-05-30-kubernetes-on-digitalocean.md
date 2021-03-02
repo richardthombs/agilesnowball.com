@@ -39,14 +39,19 @@ There are helm packages to help with the installation of nginx-ingress. I had pr
 ```sh
 helm install nginx-ingress stable/nginx-ingress
 ```
+
 As part of the installation, a DigitalOcean load balancer is automatically created. The IP address of this load balancer is where the DNS records for all of your websites should point. It might take a minute or two for DigitalOcean to complete the deployment of the load balancer, you can check on progress through the DigitalOcean website or by running:
+
 ```sh
 kubectl get services nginx-ingress-controller
 ```
+
 Once this shows that an External-IP has been allocated, your ingress controller is available publically. Check that it is working:
-```
+
+```powershell
 curl -http://<endpoint-ip-address>
 ```
+
 You will get a response from the `nginx-ingress-default-backend` service saying `default backend - 404` which means that the ingress controller couldn't figure out which website to route your request to, which isn't suprising seeing as nothing has been configured yet.
 
 ### Installing cert-manager

@@ -23,7 +23,7 @@ export default function HomePage({ allPosts }) {
 				<h1 className="text-4xl font-bold tracking-tight mb-4">
 					Hi, I'm Richard Thombs
 				</h1>
-				<div className="text-gray-600 mb-16">
+				<div className="text-gray-600 mb-16 leading-relaxed">
 					I'm a developer and have been ever since I got my first computer back in 1982 (a BBC model "A").
 					I've beaten <a className="font-medium" href="https://grack.com/demos/adventure" rel="nofollow" target="_blank">Colossal Cave</a>,
 					dabbled in a bit of MUD and even helped email addresses change from ! to @.

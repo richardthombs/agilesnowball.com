@@ -8,7 +8,7 @@ export default function About() {
 				<div className="sm:flex space-y-4 sm:space-y-0 sm:space-x-16">
 					<img className="rounded w-32" src="http://www.gravatar.com/avatar/f413eba6a4985222aeb8328e92ae89c6.png?s=128" alt="Richard's photo" />
 
-					<div className="space-y-4">
+					<div className="space-y-4 leading-relaxed">
 						<p>
 							Richard Thombs is a software development professional with 30 years experience
 							in application development and infrastructure design.
