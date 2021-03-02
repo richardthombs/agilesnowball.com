@@ -1,8 +1,11 @@
 import Layout from "../components/layout";
+import PageMeta from "../components/page-meta";
 
 export default function About() {
 	return (
 		<Layout>
+			<PageMeta />
+
 			<main className="bg-gray-100 text-gray-800 px-4 py-8 sm:p-16">
 
 				<div className="sm:flex space-y-4 sm:space-y-0 sm:space-x-16">

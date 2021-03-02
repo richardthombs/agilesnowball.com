@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Head from "next/head";
 
 import Layout from "../components/layout";
+import PageMeta from "../components/page-meta";
 import FriendlyDate from "../components/date";
 
 import { getAllPosts } from "../lib/api";
@@ -13,10 +13,10 @@ export default function HomePage({ allPosts }) {
 	return (
 		<Layout>
 
-			<Head>
-				<title>Agile Snowball</title>
-				<link rel="icon" type="image/png" href="/favicon.png" />
-			</Head>
+			<PageMeta
+				title="Richard Thombs"
+				description="Full stack developer and an experienced technologist who thrives on creating new products."
+			/>
 
 			<div className="bg-gray-100 px-4 py-8 sm:px-16 sm:py-16">
 

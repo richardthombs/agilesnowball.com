@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Head from "next/head";
 
 import Layout from "../components/layout";
+import PageMeta from "../components/page-meta";
 import FriendlyDate from "../components/date";
 
 import { getAllPosts } from "../lib/api";
@@ -13,10 +13,10 @@ export default function Blog({ allPosts }) {
 	return (
 		<Layout>
 
-			<Head>
-				<title>Richard Thombs - Blog</title>
-				<link rel="icon" type="image/png" href="/favicon.png" />
-			</Head>
+			<PageMeta
+				title="Agile Snowball by Richard Thombs"
+				description="Lessons learned and challenges faced while keeping an ASP.NET and SQL Server web application agile enough to take advantage of the latest tools, technologies and methodologies."
+			/>
 
 			<div className="bg-gray-100 px-4 py-8 sm:px-16 sm:py-16">
 				<h1 className="text-3xl font-bold mb-4">All posts</h1>
