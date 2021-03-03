@@ -11,7 +11,7 @@ export default function PageMeta(props) {
 		title: "Richard Thombs",
 		canonical: `https://agilesnowball.com${router.asPath}`,
 		description: "",
-		image: "https://agilesnowball.com/AgileSnowball.png",
+		image: "AgileSnowball.png",
 		type: "website",
 		...customMeta
 	};
@@ -29,14 +29,14 @@ export default function PageMeta(props) {
 			<meta property="og:url" content={meta.canonical} />
 			<meta property="og:title" content={meta.title} />
 			{meta.description && <meta property="og:description" content={meta.description} />}
-			<meta property="og:image" content={meta.image} />
+			<meta property="og:image" content={"https://agilesnowball.com/" + meta.image} />
 			<meta property="og:type" content={meta.type} />
 
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:site" content="@stonyuk" />
 			<meta name="twitter:title" content={meta.title} />
 			{meta.description && <meta name="twitter:description" content={meta.description} />}
-			<meta name="twitter:image" content={meta.image} />
+			<meta name="twitter:image" content={"https://agilesnowball.com/" + meta.image} />
 			{meta.date && <meta property="article:published_time" content={meta.date} />}
 		</Head>
 
