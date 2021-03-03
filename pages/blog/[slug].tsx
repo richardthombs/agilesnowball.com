@@ -19,7 +19,7 @@ export default function Post({ post }) {
 				image={post.image}
 			/>
 
-			<img className="max-h-96 w-full object-cover" src={"/" + post.image || "/AgileSnowball.png"}></img>
+			<img className="max-h-96 w-full object-cover" src={"/" + (post.image || "AgileSnowball.png")}></img>
 			<div className="bg-gray-100 px-4 py-8 sm:p-16 space-y-8 sm:space-y-8">
 				<div className="mb-12">
 					<h1 className="text-4xl font-semibold tracking-tight leading-tight">{post.title}</h1>
