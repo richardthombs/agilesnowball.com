@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "A quick solution to hitting the int maximum value in an identity column"
+description: "SQL Server has a nasty surprise in store for the unwary..."
 date:   2014-08-28 05:58:00
 ---
 

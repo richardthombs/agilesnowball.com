@@ -5,6 +5,7 @@ import PageMeta from "../components/page-meta";
 import FriendlyDate from "../components/date";
 
 import { getAllPosts } from "../lib/api";
+import BlogLink from "../components/blog-link";
 
 export default function HomePage({ allPosts }) {
 
@@ -34,14 +35,7 @@ export default function HomePage({ allPosts }) {
 				<ul className="space-y-8">
 					{posts.map(post => (
 						<li key={post.slug}>
-							<Link href={`/blog/${post.slug}`}>
-								<a>
-									<h2 className="text-lg font-medium">
-										{post.title}
-									</h2>
-									<div className="text-gray-500 text-sm"><FriendlyDate date={post.date}></FriendlyDate></div>
-								</a>
-							</Link>
+							<BlogLink post={post} />
 						</li>
 					))}
 				</ul>
@@ -79,6 +73,6 @@ export async function getStaticProps() {
 	const allPosts = getAllPosts()
 		.sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
 		.slice(0, 3)
-		.map(post => { return { title: post.title, date: post.date, slug: post.slug } }); // Strip props to bare minimum
+		.map(post => { return { title: post.title, date: post.date, slug: post.slug, description: post.description } }); // Strip props to bare minimum
 	return { props: { allPosts } };
 }

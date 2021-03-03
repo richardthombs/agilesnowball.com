@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Azure SQL Server VM Best Practices"
+description: "While trying to migrate our database server from a dedicated server to a pair of Azure VMs, we did a lot of research about how to best configure the VMs and SQL Server."
 date:   2015-04-17 09:33:00
 ---
 

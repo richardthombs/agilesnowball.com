@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "How to use Azure Storage Queues and Shared Access Signatures via the REST API"
+description: "Azure's Shared Access Signatures make it easy to give limited access to a Storage Queue to a third party without having to share your account keys."
 date:   2015-02-27 09:26:00
 ---
 

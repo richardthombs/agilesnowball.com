@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "SQL Azure gotchas"
+description: "Shortcomings with the current SQL Azure offering from Microsoft."
 date:   2014-09-08 10:29:00
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Azure Storage Emulator in Docker"
+description: "How to containerise the Azure Storage Emulator and how to reconfigure your .NET application to access it. This can be extremely useful when deploying a containerised application for testing and/or demonstration purposes."
 date:   2017-05-15 09:33:00
 ---
 

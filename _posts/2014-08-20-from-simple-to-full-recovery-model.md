@@ -1,6 +1,6 @@
 ---
 title:       "From simple to full recovery model in SQL Server"
-description: "Have you got a highly utilised SQL Server database that you're backing up with the simple recovery model, and now you are wondering how to move to the full recovery model? Well this post is for you!"
+description: "Have you got a highly utilised SQL Server database that you're backing up with the simple recovery model, and now you are wondering how to move to the full recovery model?"
 date:        2014-08-20 13:42:00
 ---
 

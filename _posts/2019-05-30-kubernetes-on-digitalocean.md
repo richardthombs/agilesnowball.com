@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Building a Kubernetes cluster on DigitalOcean to host websites and backend services"
+description: "A walkthrough on how to configure a Kubernetes cluster on DigitalOCean for website hosting using LetsEncrypt certificates."
 date:   2019-05-30 14:00:00
 ---
 

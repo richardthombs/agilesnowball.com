@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hyperlinks in Excel not working"
+description: "Excel handles hyperlinks in an unexpected manner which can often lead to confusion and frustration when trying to access content that requires authentication."
 date:   2019-03-01 09:33:00
 ---
 

@@ -1,8 +1,21 @@
 ---
 layout: post
-title:  "Configuring image pull secrets for GitHub Container Registry / GitHub Packages Docker Registry"
+title:  "Configuring Kubernetes with an image pull secret for GitHub Container Registry"
+description: "In order to pull from a secure container registry, it is necessary to configure Kubernetes with an image pull secret."
 date:   2020-11-11 09:36:00
 ---
+
+If you've got your containers hosted in the GitHub Container Registry or the GitHub
+Packages Docker Registry, then you'll need to configure Kubernetes with an "image pull
+secret" in order to authorise your cluster to access the registry.
+
+> If your GitHub repo is public then this isn't necessary for images in the GitHub
+> Container Registry, but it is necessary if your images are in the GitHub Packages Docker
+> Registry.
+
+You can easily tell which registry you are using from the URL you've posted the images to:
+
+`docker.pkg.github.com` is the GitHub Packages Docker Registry and `ghcr.io` is the GitHub Container Registry.
 
 ## 1. Generate a GitHub Personal Access Token
 
