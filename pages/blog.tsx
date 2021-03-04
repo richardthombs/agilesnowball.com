@@ -19,6 +19,8 @@ export default function Blog({ allPosts }) {
 				description="Lessons learned and challenges faced while keeping an ASP.NET and SQL Server web application agile enough to take advantage of the latest tools, technologies and methodologies."
 			/>
 
+			<img className="max-h-96 w-full object-cover" src="/AgileSnowball.png"></img>
+
 			<div className="bg-gray-100 px-4 py-8 sm:px-16 sm:py-16">
 				<h1 className="text-3xl font-bold mb-4">All posts</h1>
 				<ul className="space-y-8 sm:space-y-8">
