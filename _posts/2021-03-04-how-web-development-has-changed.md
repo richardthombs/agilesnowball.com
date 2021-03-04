@@ -1,11 +1,11 @@
 ---
 title: Looking back at the big changes in web development over the past 25 years
-description: I recently rewrote my blog using Next.js. Using one of the most modern frameworks, coupled with the retrospective nature of polishing my bio has crystalised just how far web development has come since I first saw a web page back in the early 90s.
+description: I recently rewrote my blog using Next.js. Using one of the most modern frameworks, coupled with the retrospective nature of polishing my bio has crystalised just how far web development has come since I first typed in a URL back in the early 90s.
 image: blog-images/looking-back.jpg
 date: 2021-03-04 05:00:00
 hidden: false
 ---
-I recently rewrote my blog using Next.js. Using one of the most modern frameworks coupled with the retrospective nature of polishing my bio has crystalised just how far web development has come since I first saw a web page back in the early 90s.
+I recently rewrote my blog using Next.js. Using one of the most modern frameworks coupled with the retrospective nature of polishing my bio has crystalised just how far web development has come since I first typed in a URL back in the early 90s.
 
 So I took some time out to look back at where we've come from...
 
