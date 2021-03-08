@@ -1,8 +1,5 @@
-import Link from "next/link";
-
 import Layout from "../components/layout";
 import PageMeta from "../components/page-meta";
-import FriendlyDate from "../components/date";
 
 import { getAllPosts } from "../lib/api";
 import BlogLink from "../components/blog-link";
@@ -26,7 +23,7 @@ export default function HomePage({ allPosts }) {
 				</h1>
 				<div className="text-gray-600 mb-16 leading-relaxed">
 					I'm a developer and have been ever since I got my first computer back in 1982 (a BBC model "A").
-					I've beaten <a className="font-medium" href="https://grack.com/demos/adventure" rel="nofollow" target="_blank">Colossal Cave</a>,
+					I've beaten <a className="font-medium" href="https://grack.com/demos/adventure" target="_blank" rel="noopener">Colossal Cave</a>,
 					dabbled in a bit of MUD and even helped email addresses change from ! to @.
 				</div>
 
@@ -44,21 +41,21 @@ export default function HomePage({ allPosts }) {
 
 				<ul className="grid sm:grid-cols-2 gap-8">
 					<li className="border border-gray-200 bg-gray-50 rounded px-8 py-4">
-						<a href="https://retailarmy.com" target="_blank">
+						<a href="https://retailarmy.com" target="_blank" rel="noopener">
 							<div className="text-lg font-bold">Retail Army</div>
 							<div className="text-gray-600">A recruitment portal for field marketing companies.</div>
 						</a>
 					</li>
 
 					<li className="border border-gray-200 bg-gray-50 rounded px-8 py-4">
-						<a href="https://satis.app" target="_blank">
+						<a href="https://satis.app" target="_blank" rel="noopener">
 							<div className="text-lg font-bold">Satis</div>
 							<div className="text-gray-600">Quick and easy in-store customer satisfaction capture.</div>
 						</a>
 					</li>
 
 					<li className="border border-gray-200 bg-gray-50 rounded px-8 py-4">
-						<a href="https://scunpacked.com" target="_blank">
+						<a href="https://scunpacked.com" target="_blank" rel="noopener">
 							<div className="text-lg font-bold">SCunpacked</div>
 							<div className="text-gray-600">A Star Citizen data exploration tool.</div>
 						</a>
