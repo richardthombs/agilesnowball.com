@@ -13,8 +13,8 @@ export default function CV() {
 					<main>
 						<h2 className="text-lg text-gray-500 border-b border-gray-300 mb-2">Personal statement</h2>
 						<div className="leading-relaxed">
-							An experienced technologist who thrives on creating new products. I am looking for a senior role at a start-up or small business,
-							preferably somewhere with a fast-moving entrepreneurial mindset.
+							An experienced technologist who thrives on creating products. I am looking for a senior techical role at a start-up or a larger business
+							with an agile mindset.
 						</div>
 					</main>
 
@@ -26,7 +26,10 @@ export default function CV() {
 								<div className="absolute h-full bg-gray-300 -ml-px w-0.5"></div>
 								<div className="absolute -left-3 top-0 h-6 w-6 bg-gray-300 rounded-full ring-2 ring-gray-100"></div>
 								<article className="ml-8 pt-0 break-avoid">
-									<h3 className="font-semibold">Founder</h3>
+									<div className="flex">
+										<h3 className="font-semibold w-full">Founder</h3>
+										<div className="text-gray-500 text-sm flex-shrink-0">2017 -</div>
+									</div>
 									<h4 className="text-gray-500 text-sm">Gearstone Technology</h4>
 									<div className="leading-relaxed mt-2">
 										Started a company specialising in helping companies to develop web-based products:
@@ -43,13 +46,17 @@ export default function CV() {
 								<div className="absolute h-full bg-gray-300 -ml-px w-0.5"></div>
 								<div className="absolute -left-3 top-8 h-6 w-6 bg-gray-300 rounded-full ring-2 ring-gray-100"></div>
 								<article className="ml-8 pt-8 break-avoid">
-									<h3 className="font-semibold">Founder &amp; Chief Architect</h3>
+									<div className="flex">
+										<h3 className="font-semibold w-full">Founder &amp; Chief Architect</h3>
+										<div className="text-gray-500 text-sm flex-shrink-0">2003 - 2017</div>
+									</div>
 									<h4 className="text-gray-500 text-sm">TeamHaven</h4>
 									<div className="leading-relaxed mt-2">
 										Co-founded a field management &amp; data-collection company, pioneering phone and tablet-based data collection for field workers.
 										This involved everything from concept design to building the product, as well as collaborating on marketing and sales. Over nearly 15 years,
 										I kept the product fresh by adopting new technology along the way, improving the maintainability of the code and implementing build, test,
-										deployment and monitoring tools as well.
+										deployment and monitoring tools as well. In Harry S. Truman style, the technology buck stopped at my desk - all problems, big and
+										small, they all had to be solved by me.
 									</div>
 								</article>
 							</div>
@@ -58,12 +65,15 @@ export default function CV() {
 								<div className="absolute h-full bg-gray-300 -ml-px w-0.5"></div>
 								<div className="absolute -left-3 top-8 h-6 w-6 bg-gray-300 rounded-full ring-2 ring-gray-100"></div>
 								<article className="ml-8 pt-8 break-avoid">
-									<h3 className="font-semibold">Director of Information Solutions</h3>
+									<div className="flex">
+										<h3 className="font-semibold w-full">Director of Information Solutions</h3>
+										<div className="text-gray-500 text-sm flex-shrink-0">2000 - 2003</div>
+									</div>
 									<h4 className="text-gray-500 text-sm">Mosaic Retail Solutions</h4>
 									<div className="leading-relaxed mt-2">
-										I relocated to California to work with Mosaic Retail Solutions. They needed strategic technical direction and a solid application infrastructure which I was able to deliver.
-										In my two and a half years with them, our data collection and information reporting systems became one of the best in the industry, with many client wins coming as a direct
-										result of their capabilities.
+										I relocated to California to work with Mosaic Retail Solutions. Working directly for the CEO it was my responsibility to provide strategic technical direction and a solid application
+										infrastructure.	During my time there, I developed a reporting website power by a series of OLAP reporting cubes that allows us to deliver one of the best information reporting systems
+										in the industry, with many client wins coming as a direct result of their capabilities.
 									</div>
 								</article>
 							</div>
@@ -72,12 +82,39 @@ export default function CV() {
 								<div className="absolute h-full bg-gray-300 -ml-px w-0.5"></div>
 								<div className="absolute -left-3 top-8 h-6 w-6 bg-gray-300 rounded-full ring-2 ring-gray-100"></div>
 								<article className="ml-8 pt-8 break-avoid">
-									<h3 className="font-semibold">Technical Director</h3>
+									<div className="flex">
+										<h3 className="font-semibold w-full">Technical Director</h3>
+										<div className="text-gray-500 text-sm flex-shrink-0">1997 - 2000</div>
+									</div>
 									<h4 className="text-gray-500 text-sm">Europa Merchant Services</h4>
+
 									<div className="leading-relaxed mt-2">
 										I was responsible for the development of an information systems team to provide systems administration as well as internal and customer-facing software development services.
 										As EMS was small, it was possible to be deeply involved in all aspects of running the company and I gained a good deal of commercial experience.
-										During this time I ran three very crucial parts of the operation – merchandiser support, client reporting and information systems.
+										During this time I ran three very crucial parts of the operation – merchandiser support, client reporting and information systems. While at EMS my team and I built
+										rapidly built a web-based interface for data collection and reporting which sister-companies also adopted.
+									</div>
+								</article>
+							</div>
+
+							<div className="relative">
+								<div className="absolute h-full bg-gray-300 -ml-px w-0.5"></div>
+								<div className="absolute -left-3 top-8 h-6 w-6 bg-gray-300 rounded-full ring-2 ring-gray-100"></div>
+								<article className="ml-8 pt-8 break-avoid">
+									<div className="flex">
+										<h3 className="font-semibold w-full">European Infrastructure Manager</h3>
+										<div className="text-gray-500 text-sm flex-shrink-0">1990 - 1997</div>
+									</div>
+									<h4 className="text-gray-500 text-sm">Lucas Industries</h4>
+
+									<div className="leading-relaxed mt-2">
+										I started at Lucas Industries shortly after leaving university. Initally employed as a software engineer and after a successful career, ended up as the European
+										Infrastructure Manager. Highlights include:
+										Responsible for the infrastructure in 7 sites in 6 countries with a 3 million dollar budget.
+										Managed a $1 million project to redesign Lucas' email network.
+										Member of the core team defining IS strategy and providing technical competence for strategic projects involving IT.
+										Designed and implemented Lucas' first Microsoft Mail email systems and travelled Europe installing it at other sites.
+										Designed and implemented a series of best practicies for managing a Windows and Netware installations which were used by Lucas for many years.
 									</div>
 								</article>
 							</div>
@@ -144,7 +181,7 @@ export default function CV() {
 					</section>
 				</footer>
 			</div>
-		</div>
+		</div >
 
 	);
 }
