@@ -1,7 +1,7 @@
 ---
 title: How to highlight links to the active route in Next.js
 description: The <Link> component in Next.js doesn't include the ability to highlight links that point to the currently active route. Thankfully it is easy to create a component that does.
-date: 2021-03-08 09:00:00
+date: 2021-03-05 09:00:00
 image: blog-images/nextjs.png
 ---
 

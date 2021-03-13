@@ -1,11 +1,11 @@
 ---
 title: Looking back at the big changes in web development over the past 25 years
-description: I recently rewrote my blog using Next.js. Using one of the most modern frameworks, coupled with the retrospective nature of polishing my bio has crystalised just how far web development has come since I first typed in a URL back in the early 90s.
+description: I recently rewrote my blog using Next.js. Using one of the most modern frameworks, coupled with the retrospective nature of polishing my bio has crystallised just how far web development has come since I first typed in a URL back in the early 90s.
 image: blog-images/looking-back.jpg
 date: 2021-03-04 05:00:00
 hidden: false
 ---
-I recently rewrote my blog using Next.js. Using one of the most modern frameworks coupled with the retrospective nature of polishing my bio has crystalised just how far web development has come since I first typed in a URL back in the early 90s.
+I recently rewrote my blog using Next.js. Using one of the most modern frameworks coupled with the retrospective nature of polishing my bio has crystallised just how far web development has come since I first typed in a URL back in the early 90s.
 
 So I took some time out to look back at where we've come from...
 
@@ -26,7 +26,7 @@ In the mid to late 90s, Brendan Eich developed what was to become known as JavaS
 
 Producing a complex web page page that worked on both Netscape and Internet Explorer was very challenging due to their varying implementations of both the HTML specification and their differing JavaScript engines.
 
-At the end of the 90s and into the early years of the new millenium, Internet Explorer and achived 95% dominance and innovation slowed. This was an era of websites displaying buttons at the bottom of their websites saying "Best viewed in Internet Explorer". In hindsight, these badges were a tacit admission that the site was not concerned with cross-browser compatibility, which was hard to achieve for projects of any complexity.
+At the end of the 90s and into the early years of the new millennium, Internet Explorer and achieved 95% dominance and innovation slowed. This was an era of websites displaying buttons at the bottom of their websites saying "Best viewed in Internet Explorer". In hindsight, these badges were a tacit admission that the site was not concerned with cross-browser compatibility, which was hard to achieve for projects of any complexity.
 
 ## Ajax and jQuery
 In the early 2000s, two transformative technologies arrived.
@@ -46,14 +46,14 @@ With jQuery showing that it was possible to produce a standardised, cross-browse
 
 One very happy side-effect of the new growth in web applications was the pressure it put on Microsoft to ensure that Internet Explorer was capable of rendering them. Internet Explorer had lagged behind Chrome, Firefox and Safari and Microsoft's browser was rapidly losing market share. Its years of entrenchment into corporate Intranets meant that it took the world years to finally rid itself of Internet Explorer and it is only in the last couple of years where frameworks have been able to rid themselves of having to provide Internet Explorer compatibility.
 
-Client-side frameworks have enabled SPAs (single page applications) and PWAs (progressive web applications) to flourish. In these technologies, JavaScript code running on the user's web browser constructs and reconsts a single web page, mutating it on the fly in response to user input and AJAX responses. Typically the browser will only ever request a single web page from the server (hence the term single page application).
+Client-side frameworks have enabled SPAs (single page applications) and PWAs (progressive web applications) to flourish. In these technologies, JavaScript code running on the user's web browser constructs and reconstructs a single web page, mutating it on the fly in response to user input and AJAX responses. Typically the browser will only ever request a single web page from the server (hence the term single page application).
 
 ## Where next?
 It has been fascinating to see that recent developments in Next.js and React are bringing their client-side technologies back around to include server-side rendering as well. Their different approaches are motivated by desire to deliver faster first-time-to-render performance in order to achieve higher SEO rankings and to reduce client download size respectively. Another one to watch is Microsoft's approach with Blazor. Running C# code in the browser will be of tremendous interest to the corporate world in the coming years.
 
 ## Conclusion
-The web framework space has been charactised by the rapid churn of new technologies, often with alarmingly short lifespans.
+The web framework space has been characterised by the rapid churn of new technologies, often with alarmingly short lifespans.
 
-Progress has been faster when browser manufacturers work together to create and implement standards and stifled during periods where they persue competing standards and we can only hope that the big three players continue to collaborate for many years to come.
+Progress has been faster when browser manufacturers work together to create and implement standards and stifled during periods where they pursue competing standards and we can only hope that the big three players continue to collaborate for many years to come.
 
 Meanwhile, web technologies continue to edge ever closer to the decades old nirvana of "write once, run anywhere", but like the hare never quite catching the tortoise there is still a little way to go yet...
