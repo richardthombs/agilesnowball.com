@@ -16,7 +16,7 @@ export default function Post({ post }) {
 				title={post.title}
 				type="article"
 				description={post.description}
-				image={post.image}
+				image={post.image || "AgileSnowball.png"}
 			/>
 
 			<img className="max-h-96 w-full object-cover" src={"/" + (post.image || "AgileSnowball.png")} />
