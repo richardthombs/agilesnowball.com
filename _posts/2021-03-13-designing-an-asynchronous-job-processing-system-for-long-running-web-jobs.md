@@ -1,5 +1,5 @@
 ---
-title: Architecting an asynchronous job processing system for long-running web jobs
+title: Designing an asynchronous job processing system for long-running web jobs
 description: Often a website has to process a bulk task that will take too long to run synchronously. This describes one possible architecture for an asynchronous solution using a message queue.
 date: 2021-03-13 09:00:00
 ---
