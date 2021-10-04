@@ -13,7 +13,7 @@ export default function CV() {
 					<main>
 						<h2 className="text-lg text-gray-500 border-b border-gray-300 mb-2">Personal statement</h2>
 						<div className="leading-relaxed">
-							An experienced technologist who thrives on creating products. I am looking for a senior techical role at a start-up or a larger business
+							An experienced technologist who thrives on creating products. I am looking for a senior techical role at a start-up or possibly a larger business
 							with an agile mindset.
 						</div>
 					</main>
@@ -27,13 +27,31 @@ export default function CV() {
 								<div className="absolute -left-3 top-0 h-6 w-6 bg-gray-300 rounded-full ring-2 ring-gray-100"></div>
 								<article className="ml-8 pt-0 break-avoid">
 									<div className="flex">
+										<h3 className="font-semibold w-full">Lead Software Engineer</h3>
+										<div className="text-gray-500 text-sm flex-shrink-0">2021 -</div>
+									</div>
+									<h4 className="text-gray-500 text-sm">ENSEK</h4>
+									<div className="leading-relaxed mt-2">
+										I'm currently leading a squad of developers and testers working on updating ENSEK's
+										SaaS platform to support the Belgian energy market. My time at ENSEK has been full of
+										challenges: learning their technology stack, getting up to speed with the Belgian energy market
+										and its messaging protocols and learning AWS.
+									</div>
+								</article>
+							</div>
+
+							<div className="relative">
+								<div className="absolute h-full bg-gray-300 -ml-px w-0.5"></div>
+								<div className="absolute -left-3 top-0 h-6 w-6 bg-gray-300 rounded-full ring-2 ring-gray-100"></div>
+								<article className="ml-8 pt-8 break-avoid">
+									<div className="flex">
 										<h3 className="font-semibold w-full">Founder</h3>
-										<div className="text-gray-500 text-sm flex-shrink-0">2017 -</div>
+										<div className="text-gray-500 text-sm flex-shrink-0">2017 - 2021</div>
 									</div>
 									<h4 className="text-gray-500 text-sm">Gearstone Technology</h4>
 									<div className="leading-relaxed mt-2">
 										Started a company specialising in helping companies to develop web-based products:
-											<ul className="list-disc list-outside ml-5 mt-2">
+										<ul className="list-disc list-outside ml-5 mt-2">
 											<li>A recruitment platform focused on the needs of the merchandising and field marketing industries.</li>
 											<li>An app for capturing customer satisfaction.</li>
 											<li>A dashboard designer and reporting system.</li>
@@ -56,7 +74,7 @@ export default function CV() {
 										This involved everything from concept design to building the product, as well as collaborating on marketing and sales. Over nearly 15 years,
 										I kept the product fresh by adopting new technology along the way, improving the maintainability of the code and implementing build, test,
 										deployment and monitoring tools as well. In Harry S. Truman style, the technology buck stopped at my desk - all problems, big and
-										small, they all had to be solved by me.
+										small had to be solved by me.
 									</div>
 								</article>
 							</div>
@@ -167,6 +185,7 @@ export default function CV() {
 							<h3 className="text-lg text-gray-400 font-light mb-2">Platforms</h3>
 							<div className="text-sm">
 								<span className="inline-block bg-gray-200 text-gray-800 rounded text-center mr-2 mb-2 px-2 py-1">Azure</span>
+								<span className="inline-block bg-gray-200 text-gray-800 rounded text-center mr-2 mb-2 px-2 py-1">AWS</span>
 								<span className="inline-block bg-gray-200 text-gray-800 rounded text-center mr-2 mb-2 px-2 py-1">Docker</span>
 								<span className="inline-block bg-gray-200 text-gray-800 rounded text-center mr-2 mb-2 px-2 py-1">Kubernetes</span>
 								<span className="inline-block bg-gray-200 text-gray-800 rounded text-center mr-2 mb-2 px-2 py-1">GitHub</span>
