@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: agilesnowball-website
-        image: docker.pkg.github.com/richardthombs/agilesnowball.com/agilesnowball-website:latest
+        image: ghcr.io/richardthombs/agilesnowball.com/agilesnowball-website:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
