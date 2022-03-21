@@ -7,7 +7,7 @@ export default function CV() {
 
 					<header className="flex-grow">
 						<h1 className="text-4xl">Richard Thombs</h1>
-						<h2 className="text-lg text-gray-500">Chief Architect</h2>
+						<h2 className="hidden text-lg text-gray-500">Chief Architect</h2>
 					</header>
 
 					<main>
