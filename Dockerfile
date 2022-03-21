@@ -1,8 +1,9 @@
-FROM node:alpine
+FROM node:14.19.1
 LABEL maintainer="Richard Thombs <richard@gearstone.uk>"
 
 WORKDIR /app
 COPY package.json ./
+COPY package-lock.json ./
 RUN npm install
 
 COPY . .
