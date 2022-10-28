@@ -9,12 +9,12 @@ jobs:
 
     - name: Build container
       run: |
-        docker build -t docker.pkg.github.com/richardthombs/agilesnowball.com/agilesnowball-website:latest .
+        docker build -t ghcr.io/richardthombs/agilesnowball.com/agilesnowball-website:latest .
 
     - name: Push to registry
       run: |
-        docker login docker.pkg.github.com -u richardthombs -p "${{secrets.GITHUB_TOKEN}}"
-        docker push docker.pkg.github.com/richardthombs/agilesnowball.com/agilesnowball-website:latest
+        docker login ghcr.io -u richardthombs -p "${{secrets.GITHUB_TOKEN}}"
+        docker push ghcr.io/richardthombs/agilesnowball.com/agilesnowball-website:latest
 
   Deploy:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/beta'
