@@ -1,6 +1,6 @@
 ---
 title: Founding TeamHaven
-description: A retrospective on founding TeamHaven
+description: A retrospective on founding my field management solution, TeamHaven
 date: 2026-02-19 09:07:00
 ---
 
